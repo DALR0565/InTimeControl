@@ -5,9 +5,9 @@
         <a href="{{ route('trabajadores.index') }}" class="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
             Trabajadores
         </a>
-        <a href="#proyectos" class="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+        <!-- <a href="#proyectos" class="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
             Proyectos
-        </a>
+        </a> -->
         <form action="{{route('logout')}}" method="POST">
             @csrf
             <button type="submit" class="px-3 w-full text-left cursor-pointer py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">

@@ -7,12 +7,11 @@ use \App\Http\Controllers\Auth\LoginController;
 
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return Auth::check() ? redirect()->route('trabajadores.index'):redirect()->route('login');
 });
 
-Route::middleware('guest')->group(function (){
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
-});
+
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
 Route::middleware(['auth'])->group(function (){
     Route::resource("/trabajadores", TrabajadorController::class)->parameters([
