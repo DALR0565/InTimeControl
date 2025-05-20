@@ -23,18 +23,23 @@ Este proyecto es una aplicación base desarrollada con **Laravel 12**, **Livewir
    cd InTimeControl
 
 2. **Instalar las dependencias de PHP**
-
+    ```bash
+    composer install
 
 3. **Copiar el archivo .env y generar la clave de la aplicación**
-cp .env.example .env
-php artisan key:generate
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
 
 4. **Instalar las dependencias de JavaScript**
-npm install
+    ```bash
+    npm install
 
 5. **Ejecutar migraciones y seeders**
-php artisan migrate:fresh --seed
+    ```bash
+    php artisan migrate:fresh --seed
 
 6. **Levantar el servidor de Laravel e Iniciar Vite para el frontend**
-php artisan serve
-npm run dev
+    ```bash
+    php artisan serve
+    npm run dev
