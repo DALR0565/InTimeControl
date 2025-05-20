@@ -37,8 +37,8 @@ class Edit extends Component
     public function save()
     {
         $this->form->update();
+        session()->flash('success', 'Trabajador editado correctamente.');
         $this->back();
-        $this->successNotification();
     }
     public function render()
     {

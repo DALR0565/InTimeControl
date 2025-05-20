@@ -12,4 +12,17 @@
             />
         </div>
     </div>
+    <x-notifications />
+    @if (session()->has('success'))
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            window.$wireui.notify({
+                title: '¡Éxito!',
+                description: "{{ session('success') }}", 
+                icon: 'success',
+                timeout: 3000
+            })
+        });
+    </script>
+    @endif
 @endsection

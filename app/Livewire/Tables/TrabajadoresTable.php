@@ -8,8 +8,11 @@ use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\Trabajador;
 use Rappasoft\LaravelLivewireTables\Views\Columns\ButtonGroupColumn;
 use Rappasoft\LaravelLivewireTables\Views\Columns\LinkColumn;
+use WireUi\Traits\WireUiActions;
+
 class TrabajadoresTable extends DataTableComponent
 {
+    use WireUiActions;
     protected $model = Trabajador::class;
     protected $listeners = [
         'refreshDatatable' => '$refresh',
@@ -43,6 +46,12 @@ class TrabajadoresTable extends DataTableComponent
             $trabajador->deleted_at = now();
             $trabajador->save();
         }
+        $this->notification()->send([
+            'icon' => 'success',
+            'title' => '¡Éxito!',
+            'description' => 'Trabajador eliminado correctamente',
+            'timeout' => '3000',
+        ]);
         $this->dispatch('refreshDatatable');
     }
 

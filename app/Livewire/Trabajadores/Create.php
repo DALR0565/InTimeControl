@@ -33,6 +33,7 @@ class Create extends Component
     public function save()
     {
         $this->form->store();
+        session()->flash('success', 'Trabajador creado correctamente.');
         $this->back();
     }
     public function render()
