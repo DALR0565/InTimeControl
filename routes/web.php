@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\TrabajadorController;
-use \App\Http\Controllers\ProyectoController;
-use \App\Http\Controllers\Auth\LoginController;
-
+use App\Http\Controllers\TrabajadorController;
+use App\Http\Controllers\ProyectoController;
+use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return Auth::check() ? redirect()->route('trabajadores.index'):redirect()->route('login');

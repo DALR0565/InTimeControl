@@ -1,4 +1,3 @@
-<!-- resources/views/components/layout/sidebar.blade.php -->
 <aside class="hidden md:flex w-64 flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 p-4">
     <h2 class="text-xl font-semibold mb-4">Dashboard</h2>
     <nav class="flex flex-col space-y-2">
